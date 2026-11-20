@@ -11,6 +11,7 @@ Category Price Manager for WooCommerce previews, applies, and undoes stored prod
 - `languages/`: gettext template and Persian PO/MO translations.
 - `tests/`: PHP regression suite, JavaScript regression suite, and MySQL migration fixture.
 - `tools/release.py`: translation generation, metadata validation, and ZIP packaging.
+- `.github/workflows/test.yml`: PHP matrix, regression checks, database migration tests, and Plugin Check.
 - `.wordpress-org/`: directory artwork, excluded from runtime archives.
 - `README.md`: installation and usage documentation.
 - `readme.txt`: WordPress.org metadata, documentation, and changelog.
