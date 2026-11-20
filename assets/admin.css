@@ -1,0 +1,26 @@
+.cpm-wrap { max-width: 1250px; }
+.cpm-grid { display: grid; grid-template-columns: minmax(300px, 440px) minmax(380px, 1fr); gap: 18px; align-items: start; margin: 20px 0; }
+.cpm-panel { background: #fff; border: 1px solid #dcdcde; padding: 20px; border-radius: 7px; }
+.cpm-panel h2 { margin-top: 0; }
+#cpm-form { display: flex; flex-direction: column; gap: 9px; }
+#cpm-form > label:not(.cpm-check) { margin-top: 6px; font-weight: 600; }
+#cpm-form select, #cpm-form input[type='number'] { width: 100%; max-width: 100%; }
+#cpm-form .cpm-check { margin: 5px 0; }
+#cpm-form .description { line-height: 1.5; }
+#cpm-prepare { margin-top: 5px; align-self: start; }
+.cpm-error { color: #b32d2e; font-weight: 600; }
+.cpm-table-wrap { overflow-x: auto; }
+.cpm-table-wrap table { min-width: 540px; }
+#cpm-preview > button { margin-top: 16px; }
+#cpm-progress { margin-top: 15px; }
+#cpm-bar { width: min(380px, 100%); height: 16px; vertical-align: middle; }
+#cpm-count { display: block; margin-top: 8px; }
+.cpm-history { overflow-x: auto; }
+.cpm-history table { min-width: 660px; }
+@media (max-width: 900px) { .cpm-grid { grid-template-columns: 1fr; } }
+
+/* The WordPress admin RTL stylesheet sets the page direction; keep numeric data readable. */
+.rtl .cpm-wrap .cpm-table-wrap td, .rtl .cpm-wrap .cpm-history td { unicode-bidi: plaintext; }
+
+.cpm-wrap [hidden] { display: none !important; }
+#cpm-js-status { padding: 8px 12px; margin: 10px 0; }

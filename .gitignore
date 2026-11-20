@@ -1,0 +1,48 @@
+# Dependencies and generated releases
+/vendor/
+/node_modules/
+/dist/
+
+# Local configuration and test installations
+.env
+.env.*
+!.env.example
+!.env.*.example
+/.test-site/
+
+# OS files, logs and caches
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+*.py[cod]
+.phpunit.result.cache
+.phpunit.cache/
+
+# Packaged archives and local backups
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bak
+*.orig
+*.rej
+*~
+
+# Local editor settings
+/.idea/
+/.vscode/
+*.swp
+*.swo
+
+# Test and code-quality output
+/coverage/
+/.nyc_output/
+/.pytest_cache/
+/.phpcs-cache
+/.php-cs-fixer.cache
+/test-results/
+/playwright-report/
+
+# Local Codex workspace
+/.codex/

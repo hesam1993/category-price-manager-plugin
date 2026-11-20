@@ -1,0 +1,402 @@
+# Persian translation for Category Price Manager.
+# Copyright (C) 2026 Hesam MM (hesamst)
+# Distributed under GPL-2.0-or-later.
+
+msgid ""
+msgstr "Project-Id-Version: Category Price Manager 1.3.5\nLanguage: fa_IR\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "(Ctrl/Cmd-click for multiple)"
+msgstr "(برای انتخاب چند مورد Ctrl/Cmd را نگه دارید)"
+
+msgid "Action"
+msgstr "اقدام"
+
+msgid "Adjustment"
+msgstr "روش تغییر"
+
+msgid "Amount"
+msgstr "مقدار"
+
+msgid "Another price request is still running. Wait briefly, then resume from history."
+msgstr "درخواست دیگری برای تغییر قیمت هنوز در حال اجراست. کمی صبر کنید، سپس از بخش تاریخچه ادامه دهید."
+
+msgid "Applied:"
+msgstr "اعمال‌شده:"
+
+msgid "Apply all previewed category price changes? This can affect your storefront immediately."
+msgstr "آیا همهٔ تغییرات پیش‌نمایش‌شده اعمال شوند؟ ممکن است قیمت‌های فروشگاه بلافاصله تغییر کنند."
+
+msgid "Both (existing sales only)"
+msgstr "هر دو (فقط تخفیف‌های موجود)"
+
+msgid "Cannot inspect table %s. Ask your host to allow SHOW TABLE STATUS for the WordPress database user."
+msgstr "بررسی جدول %s ممکن نیست. از پشتیبانی هاست بخواهید دسترسی SHOW TABLE STATUS را برای کاربر پایگاه دادهٔ وردپرس فراهم کند."
+
+msgid "Categories"
+msgstr "دسته‌بندی‌ها"
+
+msgid "Category Price Manager"
+msgstr "مدیریت قیمت دسته‌بندی"
+
+msgid "Category Price Manager requires WooCommerce to be active."
+msgstr "برای استفاده از مدیریت قیمت دسته‌بندی، ووکامرس باید فعال باشد."
+
+msgid "Check the PHP error log if the server returned a blank page."
+msgstr "اگر سرور صفحهٔ خالی برگرداند، گزارش خطاهای PHP را بررسی کنید."
+
+msgid "Collecting products and saving original prices:"
+msgstr "در حال جمع‌آوری محصولات و ذخیرهٔ قیمت‌های اولیه:"
+
+msgid "Collecting snapshot:"
+msgstr "در حال ذخیرهٔ نسخهٔ اولیه:"
+
+msgid "Confirm and apply changes"
+msgstr "تأیید و اعمال تغییرات"
+
+msgid "Conflicts:"
+msgstr "تداخل‌ها:"
+
+msgid "Could not count job items."
+msgstr "شمارش موارد عملیات ممکن نشد."
+
+msgid "Could not create job. Check the plugin database tables."
+msgstr "امکان ایجاد عملیات وجود ندارد. جدول‌های پایگاه دادهٔ افزونه را بررسی کنید."
+
+msgid "Could not load history."
+msgstr "بارگیری تاریخچه ممکن نشد."
+
+msgid "Could not load history:"
+msgstr "بارگذاری تاریخچه ناموفق بود:"
+
+msgid "Could not save job progress. Retry from history."
+msgstr "ذخیرهٔ پیشرفت عملیات ممکن نشد. از بخش تاریخچه دوباره تلاش کنید."
+
+msgid "Could not upgrade plugin table %s to InnoDB. No product prices were changed in this request. Ask your host to check ALTER permission, InnoDB availability, free disk space, and database locks, then retry."
+msgstr "تبدیل جدول افزونهٔ %s به InnoDB ممکن نشد. در این درخواست هیچ قیمت محصولی تغییر نکرد. از پشتیبانی هاست بخواهید مجوز ALTER، دسترسی به InnoDB، فضای خالی دیسک و قفل‌های پایگاه داده را بررسی کند، سپس دوباره تلاش کنید."
+
+msgid "Could not verify saved price"
+msgstr "امکان تأیید قیمت ذخیره‌شده وجود ندارد"
+
+msgid "Could not verify the InnoDB upgrade for plugin table %s. No product prices were changed in this request. Retry after your host checks the table."
+msgstr "تأیید تبدیل جدول افزونهٔ %s به InnoDB ممکن نشد. در این درخواست هیچ قیمت محصولی تغییر نکرد. پس از بررسی جدول توسط پشتیبانی هاست دوباره تلاش کنید."
+
+msgid "Current regular / sale"
+msgstr "قیمت عادی / ویژه فعلی"
+
+msgid "Database operation failed. No completion was recorded; retry from history."
+msgstr "عملیات پایگاه داده ناموفق بود. پایان عملیات ثبت نشد؛ از بخش تاریخچه دوباره تلاش کنید."
+
+msgid "Database upgrade cannot run safely in this request. Retry from history."
+msgstr "ارتقای پایگاه داده در این درخواست به‌صورت امن ممکن نیست. از بخش تاریخچه دوباره تلاش کنید."
+
+msgid "Date / job"
+msgstr "تاریخ / عملیات"
+
+msgid "Decrease"
+msgstr "کاهش"
+
+msgid "Decreases cannot exceed 100%."
+msgstr "درصد کاهش نمی‌تواند بیش از ۱۰۰٪ باشد."
+
+msgid "Enter a valid non-negative amount (up to 1,000,000,000)."
+msgstr "مقدار نامنفی معتبر وارد کنید (حداکثر ۱٬۰۰۰٬۰۰۰٬۰۰۰)."
+
+msgid "Fixed amount (store currency)"
+msgstr "مبلغ ثابت (واحد پول فروشگاه)"
+
+msgid "Include subcategories"
+msgstr "شامل زیردسته‌ها"
+
+msgid "Include variations of variable products"
+msgstr "شامل متغیرهای محصولات متغیر"
+
+msgid "Increase"
+msgstr "افزایش"
+
+msgid "Invalid pricing rule."
+msgstr "قانون قیمت‌گذاری نامعتبر است."
+
+msgid "Invalid snapshot"
+msgstr "نسخهٔ اولیهٔ قیمت نامعتبر است"
+
+msgid "JavaScript is required. If this message remains visible, the plugin script did not load; check your browser console and cache."
+msgstr "جاوااسکریپت لازم است. اگر این پیام همچنان نمایش داده می‌شود، اسکریپت افزونه بارگیری نشده است؛ کنسول مرورگر و کش را بررسی کنید."
+
+msgid "Job is not in staging mode."
+msgstr "عملیات در مرحلهٔ آماده‌سازی نیست."
+
+msgid "Job not found."
+msgstr "عملیات پیدا نشد."
+
+msgid "Legacy price ownership is uncertain"
+msgstr "مشخص نیست تغییر قیمت قبلی توسط این افزونه انجام شده باشد"
+
+msgid "Load preview"
+msgstr "بارگذاری پیش‌نمایش"
+
+msgid "New category price update"
+msgstr "تغییر قیمت جدید برای دسته‌بندی"
+
+msgid "Next page"
+msgstr "صفحهٔ بعد"
+
+msgid "No categories available."
+msgstr "دسته‌بندی‌ای در دسترس نیست."
+
+msgid "No change"
+msgstr "بدون تغییر"
+
+msgid "No jobs yet."
+msgstr "هنوز عملیاتی ثبت نشده است."
+
+msgid "No product edit permission"
+msgstr "مجوز ویرایش محصول وجود ندارد"
+
+msgid "No products found for these categories and settings."
+msgstr "محصولی با این دسته‌بندی‌ها و تنظیمات پیدا نشد."
+
+msgid "No regular price"
+msgstr "قیمت عادی ندارد"
+
+msgid "No storage engine was reported for table %s. Ask your host to check that the table exists, is accessible, and is not a view."
+msgstr "موتور ذخیره‌سازی جدول %s مشخص نشد. از پشتیبانی هاست بخواهید وجود جدول، دسترسی به آن و نبودن آن از نوع view را بررسی کند."
+
+msgid "One of the selected categories no longer exists."
+msgstr "یکی از دسته‌بندی‌های انتخاب‌شده دیگر وجود ندارد."
+
+msgid "Only a completed update can be undone."
+msgstr "فقط تغییر قیمت تکمیل‌شده قابل بازگردانی است."
+
+msgid "Operation"
+msgstr "عملیات"
+
+msgid "Out-of-range price"
+msgstr "قیمت خارج از محدودهٔ مجاز است"
+
+msgid "Paused:"
+msgstr "متوقف شد:"
+
+msgid "Percentage (%)"
+msgstr "درصد (%)"
+
+msgid "Percentage is too large."
+msgstr "درصد بیش از حد بزرگ است."
+
+msgid "Permission denied or WooCommerce inactive."
+msgstr "دسترسی مجاز نیست یا ووکامرس فعال نیست."
+
+msgid "Prepare a snapshot, inspect the proposed changes, then apply in small batches. Undo skips prices changed by another process after this plugin updated them."
+msgstr "ابتدا نسخه‌ای از قیمت‌ها ذخیره کنید، تغییرات پیشنهادی را بررسی کنید و سپس آن‌ها را در دسته‌های کوچک اعمال کنید. هنگام بازگردانی، قیمت‌هایی که پس از تغییر افزونه توسط فرایند دیگری ویرایش شده‌اند، نادیده گرفته می‌شوند."
+
+msgid "Prepare preview"
+msgstr "آماده‌سازی پیش‌نمایش"
+
+msgid "Preparing safe price updates. Keep this page open."
+msgstr "در حال آماده‌سازی تغییر امن قیمت‌ها. این صفحه را باز نگه دارید."
+
+msgid "Preview / progress"
+msgstr "پیش‌نمایش / پیشرفت"
+
+msgid "Preview is not ready yet."
+msgstr "پیش‌نمایش هنوز آماده نیست."
+
+msgid "Preview ready. Confirm to begin updating prices."
+msgstr "پیش‌نمایش آماده است. برای شروع تغییر قیمت‌ها تأیید کنید."
+
+msgid "Preview shows the first 30 products. All matching products are snapshotted before applying. Changes made after the preview are skipped as conflicts."
+msgstr "پیش‌نمایش ۳۰ محصول نخست را نشان می‌دهد. پیش از اعمال تغییرات، قیمت تمام محصولات منطبق ذخیره می‌شود. تغییراتی که پس از پیش‌نمایش انجام شده باشند به‌عنوان تداخل نادیده گرفته می‌شوند."
+
+msgid "Previous page"
+msgstr "صفحهٔ قبل"
+
+msgid "Price changed since snapshot"
+msgstr "قیمت پس از ذخیرهٔ نسخهٔ اولیه تغییر کرده است"
+
+msgid "Price to change"
+msgstr "نوع قیمت برای تغییر"
+
+msgid "Price update could not be committed. The item remains retryable; resume from history after checking the error log."
+msgstr "ثبت تغییر قیمت ممکن نشد. پس از بررسی گزارش خطا، از بخش تاریخچه دوباره تلاش کنید."
+
+msgid "Product"
+msgstr "محصول"
+
+msgid "Product missing or changed type"
+msgstr "محصول وجود ندارد یا نوع آن تغییر کرده است"
+
+msgid "Products"
+msgstr "محصولات"
+
+msgid "Proposed regular / sale"
+msgstr "قیمت عادی / ویژه پیشنهادی"
+
+msgid "Ready"
+msgstr "آماده"
+
+msgid "Regular price"
+msgstr "قیمت عادی"
+
+msgid "Request failed."
+msgstr "درخواست ناموفق بود."
+
+msgid "Request timed out. The operation can be resumed from Update History."
+msgstr "زمان درخواست به پایان رسید. می‌توانید عملیات را از بخش تاریخچهٔ تغییرات ادامه دهید."
+
+msgid "Restoring original prices in batches. Keep this page open."
+msgstr "قیمت‌های اولیه در دسته‌های کوچک بازگردانی می‌شوند. این صفحه را باز نگه دارید."
+
+msgid "Result"
+msgstr "نتیجه"
+
+msgid "Results"
+msgstr "نتایج"
+
+msgid "Resume preview"
+msgstr "ادامهٔ آماده‌سازی پیش‌نمایش"
+
+msgid "Resume undo"
+msgstr "ادامهٔ بازگردانی"
+
+msgid "Resume update"
+msgstr "ادامهٔ به‌روزرسانی"
+
+msgid "Rule"
+msgstr "قانون"
+
+msgid "Sale must be lower than regular price"
+msgstr "قیمت فروش ویژه باید کمتر از قیمت عادی باشد"
+
+msgid "Sale price (existing sales only)"
+msgstr "قیمت فروش ویژه (فقط تخفیف‌های موجود)"
+
+msgid "Save failed"
+msgstr "ذخیره‌سازی ناموفق بود"
+
+msgid "Select 1–100 categories."
+msgstr "بین ۱ تا ۱۰۰ دسته‌بندی انتخاب کنید."
+
+msgid "Select at least one category."
+msgstr "حداقل یک دسته‌بندی انتخاب کنید."
+
+msgid "Select categories and prepare a preview. No prices change before you confirm."
+msgstr "دسته‌بندی‌ها را انتخاب و پیش‌نمایش را آماده کنید. تا پیش از تأیید شما هیچ قیمتی تغییر نمی‌کند."
+
+msgid "Set exact price"
+msgstr "تعیین قیمت دقیق"
+
+msgid "Skipped:"
+msgstr "نادیده‌گرفته‌شده:"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Table %1$s uses %2$s; InnoDB is required. Ask your host to back up the database and convert this table to InnoDB."
+msgstr "جدول %1$s از %2$s استفاده می‌کند؛ InnoDB لازم است. از پشتیبانی هاست بخواهید پس از پشتیبان‌گیری از پایگاه داده، این جدول را به InnoDB تبدیل کند."
+
+msgid "The request was redirected to a login page. Log in again and retry."
+msgstr "درخواست به صفحهٔ ورود هدایت شد. دوباره وارد شوید و تلاش کنید."
+
+msgid "The server returned a page instead of a JSON response. Check the browser Network tab and PHP error log."
+msgstr "سرور به‌جای پاسخ JSON یک صفحه بازگرداند. زبانهٔ Network مرورگر و گزارش خطای PHP را بررسی کنید."
+
+msgid "This job cannot be applied."
+msgstr "این عملیات قابل اعمال نیست."
+
+msgid "Unable to query products. Check the database error log."
+msgstr "امکان دریافت محصولات وجود ندارد. گزارش خطاهای پایگاه داده را بررسی کنید."
+
+msgid "Unable to read the batch."
+msgstr "خواندن دستهٔ پردازش ممکن نشد."
+
+msgid "Unable to save a product snapshot. Check the database error log."
+msgstr "امکان ذخیرهٔ نسخهٔ اولیهٔ قیمت محصول وجود ندارد. گزارش خطای پایگاه داده را بررسی کنید."
+
+msgid "Undo"
+msgstr "بازگردانی"
+
+msgid "Undo completed."
+msgstr "بازگردانی تکمیل شد."
+
+msgid "Undo restores original regular and sale prices only when the current values match those applied by that job. Undo cannot reverse changes made by other tools in the meantime."
+msgstr "بازگردانی تنها زمانی قیمت عادی و فروش ویژهٔ اولیه را برمی‌گرداند که قیمت فعلی با قیمت اعمال‌شده توسط همان عملیات برابر باشد. تغییراتی که ابزارهای دیگر در این فاصله ایجاد کرده‌اند بازگردانده نمی‌شوند."
+
+msgid "Undo this price update wherever the price still matches the value it set?"
+msgstr "آیا این تغییر قیمت در مواردی که قیمت فعلی هنوز با مقدار اعمال‌شده برابر است بازگردانی شود؟"
+
+msgid "Undone:"
+msgstr "بازگردانی‌شده:"
+
+msgid "Unpriced products are skipped. The sale-price option only affects products that already have a sale price. Invalid sale/regular combinations are skipped rather than silently changing discounts."
+msgstr "محصولات بدون قیمت نادیده گرفته می‌شوند. گزینهٔ قیمت فروش ویژه تنها روی محصولاتی که از قبل قیمت فروش ویژه دارند اثر می‌گذارد. ترکیب نامعتبر قیمت عادی و فروش ویژه نیز نادیده گرفته می‌شود."
+
+msgid "Update completed."
+msgstr "به‌روزرسانی تکمیل شد."
+
+msgid "Update history and undo"
+msgstr "تاریخچهٔ تغییرات و بازگردانی"
+
+msgid "Updating prices in batches. Keep this page open."
+msgstr "قیمت‌ها در دسته‌های کوچک به‌روزرسانی می‌شوند. این صفحه را باز نگه دارید."
+
+msgid "You can resume from the history section."
+msgstr "می‌توانید از بخش تاریخچه ادامه دهید."
+
+msgid "Your session has expired. Refresh this page and retry."
+msgstr "نشست شما منقضی شده است. صفحه را تازه‌سازی کنید و دوباره تلاش کنید."
+
+msgid "applying"
+msgstr "در حال اعمال"
+
+msgid "both"
+msgstr "هر دو"
+
+msgid "completed"
+msgstr "تکمیل‌شده"
+
+msgid "currency"
+msgstr "واحد پول"
+
+msgid "decrease"
+msgstr "کاهش"
+
+msgid "e.g. 10"
+msgstr "مثلاً ۱۰"
+
+msgid "increase"
+msgstr "افزایش"
+
+msgid "product records matched."
+msgstr "رکورد محصول منطبق یافت شد."
+
+msgid "ready"
+msgstr "آماده"
+
+msgid "ready to change;"
+msgstr "آمادهٔ تغییر؛"
+
+msgid "records so far…"
+msgstr "رکورد تا این لحظه…"
+
+msgid "records…"
+msgstr "رکورد…"
+
+msgid "regular"
+msgstr "عادی"
+
+msgid "sale"
+msgstr "فروش ویژه"
+
+msgid "set"
+msgstr "تعیین قیمت"
+
+msgid "skipped by pricing rules."
+msgstr "طبق قوانین قیمت‌گذاری نادیده گرفته شد."
+
+msgid "staging"
+msgstr "در حال آماده‌سازی"
+
+msgid "undoing"
+msgstr "در حال بازگردانی"
+
+msgid "undone"
+msgstr "بازگردانی‌شده"
