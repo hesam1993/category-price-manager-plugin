@@ -1,0 +1,88 @@
+name: Plugin validation
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
+    services:
+      database:
+        image: mariadb:11.4
+        env:
+          # The migration fixture connects as root with an empty password.
+          # This database exists only inside the disposable CI runner.
+          MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 'yes'
+          MARIADB_ROOT_HOST: '%'
+          MARIADB_DATABASE: cpm_test
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="mariadb-admin ping -h127.0.0.1"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '${{ matrix.php }}'
+          extensions: mysqli
+          coverage: none
+      - name: PHP syntax
+        run: |
+          php -l category-price-manager.php
+          find tests -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: JavaScript syntax and behavior
+        run: |
+          node --check assets/admin.js
+          node tests/admin-regression.cjs
+      - name: Pricing and undo regression tests
+        run: php tests/plugin-regression.php
+      - name: Database migration integration tests
+        env:
+          CPM_TEST_DB_HOST: 127.0.0.1
+        run: php tests/migration-integration.php
+      - name: Validate metadata, translations and release archive
+        run: |
+          python3 tools/release.py
+          git diff --exit-code -- languages/
+
+  directory-review:
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build runtime-only plugin ZIP
+        run: |
+          python3 tools/release.py
+          mkdir -p "$RUNNER_TEMP/directory-review"
+          unzip -q dist/category-price-manager-*-review-candidate.zip -d "$RUNNER_TEMP/directory-review"
+      - name: Official WordPress Plugin Check
+        uses: WordPress/plugin-check-action@v1
+        with:
+          build-dir: '${{ runner.temp }}/directory-review/category-price-manager'
+          slug: category-price-manager
+          strict: true
+      - name: Upload reviewed plugin ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: category-price-manager-review-candidate
+          path: dist/category-price-manager-*-review-candidate.zip
+          if-no-files-found: error

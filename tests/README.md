@@ -25,4 +25,10 @@ CPM_TEST_DB_HOST=127.0.0.1 php tests/migration-integration.php
 
 The fixture verifies actual engine conversion, rows/IDs/index/sequence preservation, advisory lock exclusion, timeout restoration, denied ALTER and retry. The helper now supports `%i`. It uses lightweight WordPress stubs and is not a full WooCommerce integration test.
 
-PHP, WP-CLI and database tests were unavailable during preparation of 1.3.4. All test tooling is excluded from the runtime ZIP.
+## GitHub Actions
+
+`.github/workflows/test.yml` runs on pushes, pull requests, and manual launches. It runs PHP syntax, pricing/undo regressions, JavaScript checks, and the native migration fixture against a disposable MariaDB service on PHP 7.4 and 8.0–8.5. The release builder checks metadata and translations, and CI rejects uncommitted generated translation changes.
+
+After all matrix jobs pass, the workflow builds the runtime ZIP, runs strict WordPress Plugin Check, and uploads the ZIP as a downloadable artifact. It does not publish the plugin. These checks do not replace live WooCommerce or browser testing.
+
+All test tooling is excluded from the runtime ZIP.
