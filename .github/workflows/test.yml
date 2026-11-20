@@ -1,4 +1,4 @@
-name: Plugin validation
+name: Category prices - tests and release checks
 
 on: [push, pull_request, workflow_dispatch]
 
@@ -7,6 +7,7 @@ permissions:
 
 jobs:
   test:
+    name: "Price updates and undo | PHP ${{ matrix.php }}"
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -29,58 +30,65 @@ jobs:
           --health-timeout=5s
           --health-retries=20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Check out plugin source
+        uses: actions/checkout@v4
+      - name: Set up Node.js 22 for JavaScript tests
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - uses: actions/setup-python@v5
+      - name: Set up Python 3.12 for translation and release checks
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - uses: shivammathur/setup-php@v2
+      - name: Set up PHP and MySQL extension
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '${{ matrix.php }}'
           extensions: mysqli
           coverage: none
-      - name: PHP syntax
+      - name: Check plugin and test PHP file syntax
         run: |
           php -l category-price-manager.php
           find tests -name '*.php' -print0 | xargs -0 -n1 php -l
-      - name: JavaScript syntax and behavior
+      - name: Test admin preview, progress and history controls
         run: |
           node --check assets/admin.js
           node tests/admin-regression.cjs
-      - name: Pricing and undo regression tests
+      - name: Test price updates, undo, conflicts and permissions
         run: php tests/plugin-regression.php
-      - name: Database migration integration tests
+      - name: Test InnoDB migration, database locks and recovery
         env:
           CPM_TEST_DB_HOST: 127.0.0.1
         run: php tests/migration-integration.php
-      - name: Validate metadata, translations and release archive
+      - name: Validate plugin metadata, translations and installation ZIP
         run: |
           python3 tools/release.py
           git diff --exit-code -- languages/
 
   directory-review:
+    name: WordPress.org package and plugin checks
     needs: test
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out plugin source
+        uses: actions/checkout@v4
+      - name: Set up Python 3.12 for packaging
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build runtime-only plugin ZIP
+      - name: Build installation ZIP containing runtime plugin files
         run: |
           python3 tools/release.py
           mkdir -p "$RUNNER_TEMP/directory-review"
           unzip -q dist/category-price-manager-*-review-candidate.zip -d "$RUNNER_TEMP/directory-review"
-      - name: Official WordPress Plugin Check
+      - name: Run strict WordPress.org Plugin Check
         uses: WordPress/plugin-check-action@v1
         with:
           build-dir: '${{ runner.temp }}/directory-review/category-price-manager'
           slug: category-price-manager
           strict: true
-      - name: Upload reviewed plugin ZIP
+      - name: Save validated plugin ZIP for download
         uses: actions/upload-artifact@v4
         with:
           name: category-price-manager-review-candidate
